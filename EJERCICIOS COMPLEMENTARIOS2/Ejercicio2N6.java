@@ -1,5 +1,3 @@
-package EJERCICIO2N6;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -16,7 +14,7 @@ import java.util.Set;
 // almacenar en un Map (o Diccionario) donde la clave (key) es el dni y el valor
 // (value) es el sueldo calculado.
 
-public class Ejercicio2N6ServicioEmpleado {
+public class Ejercicio2N6 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         Scanner scan2 = new Scanner(System.in);
@@ -33,7 +31,8 @@ public class Ejercicio2N6ServicioEmpleado {
 
     private static void imprimirSueldos(Map<Integer, Integer> sueldos) {
         for (Map.Entry<Integer, Integer> sueldo : sueldos.entrySet()) {
-            System.out.println(String.format("TODOS LOS SUELDOS:\n- DNI: %s | SUELDO: $%s\n", sueldo.getKey(), sueldo.getValue()));
+            System.out.println(
+                    String.format("TODOS LOS SUELDOS:\n- DNI: %s | SUELDO: $%s\n", sueldo.getKey(), sueldo.getValue()));
         }
     }
 
@@ -81,5 +80,51 @@ public class Ejercicio2N6ServicioEmpleado {
                 break;
             }
         }
+    }
+
+    private static class Ejercicio2N6Empleado {
+        private String nombre;
+        private String apellido;
+        private int dni;
+        private int horasTrabajadas;
+        private int valorPorHora;
+
+        public Ejercicio2N6Empleado(String nombre, String apellido, int dni, int horasTrabajadas, int valorPorHora) {
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.dni = dni;
+            this.horasTrabajadas = horasTrabajadas;
+            this.valorPorHora = valorPorHora;
+        }
+
+        public String getNombre() {
+            return nombre;
+        }
+
+        public String getApellido() {
+            return apellido;
+        }
+
+        public int getDni() {
+            return dni;
+        }
+
+
+        public int getHorasTrabajadas() {
+            return horasTrabajadas;
+        }
+
+
+        public int getValorPorHora() {
+            return valorPorHora;
+        }
+
+        @Override
+        public String toString() {
+            return "Ejercicio2N6Empleado [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni
+                    + ", horasTrabajadas=" + horasTrabajadas
+                    + ", valorPorHora=" + valorPorHora + "]";
+        }
+
     }
 }
