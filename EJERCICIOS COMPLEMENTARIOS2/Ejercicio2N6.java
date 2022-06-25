@@ -109,11 +109,9 @@ public class Ejercicio2N6 {
             return dni;
         }
 
-
         public int getHorasTrabajadas() {
             return horasTrabajadas;
         }
-
 
         public int getValorPorHora() {
             return valorPorHora;
@@ -125,6 +123,5 @@ public class Ejercicio2N6 {
                     + ", horasTrabajadas=" + horasTrabajadas
                     + ", valorPorHora=" + valorPorHora + "]";
         }
-
     }
 }
